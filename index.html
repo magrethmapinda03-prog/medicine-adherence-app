@@ -4,7 +4,25 @@
       <title>Medicine Adherence App</title>
 </head>
 <body>
-    <h1>Medicine Adherence App</h1>
+   <h1>Medicine Adherence App</h1>
     <p>Track your daily medication easily.</p>
+
+    <h2>Add Medication</h2>
+    <form id="medicineForm">
+        <label>
+            Medicine Name:
+            <input type="text" id="medicineName" required>
+        </label><br><br>
+
+        <label>
+            Dosage:
+            <input type="text" id="dosage" required>
+        </label><br><br>
+
+        <button type="submit">Add Medicine</button>
+    </form>
+
+    <h2>My Medications</h2>
+    <ul id="medicineList"></ul>
 </body>
 </html>

@@ -17,6 +17,8 @@ let medicines = JSON.parse(localStorage.getItem("medicines")) || [];
 
         medicineList.appendChild(li);
     });
+    updateAdherence();
+
 }
 function markAsTaken(index) {
     medicines[index].taken = true;
@@ -39,4 +41,15 @@ form.addEventListener("submit", function(event) {
 });
 
 displayMedicines();
+updateAdherence();
+function updateAdherence() {
+    const total = medicines.length;
+    const taken = medicines.filter(med => med.taken).length;
+
+    const percentage = total === 0 ? 0 : Math.round((taken / total) * 100);
+
+    document.getElementById("adherence").textContent =
+        "Adherence: " + percentage + "%";
+}
+
 

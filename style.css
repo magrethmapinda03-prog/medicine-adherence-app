@@ -74,3 +74,43 @@ body {
 .waitlist button {
     cursor: pointer;
 }
+.app-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#medicineList {
+    list-style: none;
+    padding: 0;
+}
+
+#medicineList li {
+    background: #f4f9ff;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#adherencePercentage {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27AE60;
+}

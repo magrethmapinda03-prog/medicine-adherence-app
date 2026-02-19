@@ -57,12 +57,12 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.wait list {
+.waitlist {
     padding: 50px 20px;
     background: #eaf4ff;
 }
 
-.wait list input {
+.waitlist input {
     display: block;
     margin: 10px auto;
     padding: 10px;
@@ -71,7 +71,7 @@ body {
     border: 1px solid #ccc;
 }
 
-.wait list button {
+.waitlist button {
     cursor: pointer;
 }
 .app-container {

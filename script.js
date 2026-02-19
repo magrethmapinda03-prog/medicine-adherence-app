@@ -71,3 +71,29 @@ function updateAdherence() {
 
 // INITIAL LOAD
 displayMedicines();
+const waitlistForm = document.getElementById("waitlistForm");
+
+if (waitlistForm) {
+  waitlistForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // ⛔ stops page reload
+
+    const name = document.getElementById("waitlistName").value.trim();
+    const email = document.getElementById("waitlistEmail").value.trim();
+
+    if (!name || !email) return;
+
+    const waitlist =
+      JSON.parse(localStorage.getItem("waitlist")) || [];
+
+    waitlist.push({
+      name,
+      email,
+      joinedAt: new Date().toISOString()
+    });
+
+    localStorage.setItem("waitlist", JSON.stringify(waitlist));
+
+    waitlistForm.reset();
+    alert("You're on the waitlist!");
+  });
+}

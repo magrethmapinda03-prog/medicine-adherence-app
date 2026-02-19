@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f9ff;
+    color: #1B4F72;
+    text-align: center;
+}
+
+.hero {
+    padding: 80px 20px;
+    background: #eaf4ff;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.primary {
+    background-color: #2E86DE;
+    color: white;
+}
+
+.secondary {
+    background-color: #27AE60;
+    color: white;
+}
+
+.benefits {
+    padding: 50px 20px;
+}
+
+.benefit-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.waitlist {
+    padding: 50px 20px;
+    background: #eaf4ff;
+}
+
+.waitlist input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.waitlist button {
+    cursor: pointer;
+}

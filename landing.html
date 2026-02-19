@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicine Adherence Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Medicine Adherence Tracker</h1>
+        <p>Stay consistent. Stay healthy. Track your daily medications with ease.</p>
+        <div class="buttons">
+            <a href="index.html" class="btn primary">Enter App</a>
+            <a href="#waitlist" class="btn secondary">Join Waitlist</a>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <h2>Why Use Our App?</h2>
+        <div class="benefit-cards">
+            <div class="card">
+                <h3>Track Medicines</h3>
+                <p>Easily add and manage your daily medications.</p>
+            </div>
+            <div class="card">
+                <h3>Monitor Adherence</h3>
+                <p>See your adherence percentage in real-time.</p>
+            </div>
+            <div class="card">
+                <h3>Improve Health</h3>
+                <p>Stay consistent and improve your health outcomes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="waitlist" class="waitlist">
+        <h2>Join Our Waitlist</h2>
+        <form id="waitlistForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <button type="submit" class="btn primary">Join Waitlist</button>
+        </form>
+        <p id="message"></p>
+    </section>
+
+    <script>
+        document.getElementById("waitlistForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            let waitlist = JSON.parse(localStorage.getItem("waitlist")) || [];
+            waitlist.push({ name, email });
+            localStorage.setItem("waitlist", JSON.stringify(waitlist));
+
+            document.getElementById("message").innerText = 
+                "Thank you for joining the waitlist!";
+            
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

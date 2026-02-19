@@ -3,28 +3,33 @@
 <head>
       <title>Medicine Adherence App</title>
 </head>
-<body>
-   <h1>Medicine Adherence App</h1>
-    <p>Track your daily medication easily.</p>
+<>
 
-    <h2>Add Medication</h2>
-    <form id="medicineForm">
-        <label>
-            Medicine Name:
-            <input type="text" id="medicineName" required>
-        </label><br><br>
+    <header class="hero">
+        <h1>Medicine Adherence Dashboard</h1>
+        <p>Manage your daily medications effectively.</p>
+        <a href="landing.html" class="btn secondary">Back to Landing Page</a>
+    </header>
 
-        <label>
-            Dosage:
-            <input type="text" id="dosage" required>
-        </label><br><br>
+    <section class="app-container">
+        <div class="card">
 
-        <button type="submit">Add Medicine</button>
-    </form>
+            <h2>Add Medicine</h2>
 
-    <h2>My Medications</h2>
-    <p id="adherence"></p>
- <ul id="medicineList"></ul>
-    <script src="script.js"></script>
+            <form id="medicineForm">
+                <input type="text" id="medicineName" placeholder="Medicine Name" required>
+                <input type="text" id="dosage" placeholder="Dosage" required>
+                <button type="submit" class="btn primary">Add Medicine</button>
+            </form>
+
+            <h2>Your Medicines</h2>
+            <ul id="medicineList"></ul>
+
+            <h2>Adherence</h2>
+            <p id="adherencePercentage">0%</p>
+
+        </div>
+    </section>
+<script src="script.js"></script>
 </body>
 </html>

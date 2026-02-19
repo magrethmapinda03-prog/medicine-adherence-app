@@ -42,6 +42,8 @@ form.addEventListener("submit", function(event) {
 
 displayMedicines();
 updateAdherence();
+document.getElementById("progressFill").style.width = percentage + "%";
+
 function updateAdherence() {
     const total = medicines.length;
     const taken = medicines.filter(med => med.taken).length;
